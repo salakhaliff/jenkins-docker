@@ -5,7 +5,7 @@ node {
         app =  docker.build("php-apache:latest")
     }
     stage('Push Image to Docker REgistry'){
-        docker.withRegistry('https://registry.hubn.docker.com','dockerhub-creds'){
+        docker.withRegistry('https://registry.hub.docker.com','dockerhub-creds'){
             app.push()
         }
     }
